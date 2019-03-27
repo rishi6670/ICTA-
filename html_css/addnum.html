@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function read()
+        {
+            var n=parseInt(document.getElementById("n1").value);
+            var m=parseInt(document.getElementById("n2").value);
+            var p=parseInt(document.getElementById("operate").value);
+            var z=0;
+            switch(p)
+            {
+                case 1:
+                        z=n+m;
+                        console.log(z);
+                        break;
+                case 2:
+                        z=n-m;
+                        console.log(z);
+                        break;
+                case 3:
+                        z=n*m;
+                        console.log(z);
+                        break;
+                case 4:
+                         z=n/m;
+                        console.log(z);
+                        break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-4"></div>
+            <div class="col col-12 col-sm-4">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Number 1: </td>
+                            <td><input type="number" id="n1"></td>
+                        </tr>
+                        <tr>
+                            <td>Number 2 :</td>
+                            <td><input type="number" id="n2"></td>
+                        </tr>
+                        <tr>
+                            <td>Operation</td>
+                            <td><select id="operate">
+                                <option value="1">Add</option>
+                                <option value="2">Substract</option>
+                                <option value="3">Multiplication</option>
+                                <option value="4">Dividion</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick=" read();">Submit</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col col-12 col-sm-4"></div>
+
+        </div>
+
+    </div>
+</body>
+</html>
