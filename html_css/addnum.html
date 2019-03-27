@@ -6,33 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script>
-        function read()
-        {
-            var n=parseInt(document.getElementById("n1").value);
-            var m=parseInt(document.getElementById("n2").value);
-            var p=parseInt(document.getElementById("operate").value);
-            var z=0;
-            switch(p)
-            {
-                case 1:
-                        z=n+m;
-                        console.log(z);
-                        break;
-                case 2:
-                        z=n-m;
-                        console.log(z);
-                        break;
-                case 3:
-                        z=n*m;
-                        console.log(z);
-                        break;
-                case 4:
-                         z=n/m;
-                        console.log(z);
-                        break;
-            }
-        }
+    <script src="./script.js">
     </script>
 </head>
 <body>
@@ -62,6 +36,10 @@
                         </tr>
                         <tr>
                             <td><button type="button" onclick=" read();">Submit</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
                         </tr>
                     </table>
                 </form>
