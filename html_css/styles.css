@@ -1,0 +1,13 @@
+body{
+    background: red;
+}
+table{
+    border: 3px solid black;
+    background: goldenrod;
+    font:italic;
+}
+.mybutton{
+    background: gray;
+}.imag{
+    background-image: url(rose.jpg);
+}
