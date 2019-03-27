@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td.right{
+            text-align: center;
+        }
+        table{  
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        function read()
+        {
+            //console.log("test");
+                var n=document.getElementById("name").value;
+                console.log(n);
+            var ro=document.getElementById("rollno".value);
+            console.log(ro);
+            var adno=document.getElementById("admno").value;
+            console.log(adno);
+            var colg=document.getElementById("college").value;
+            console.log(colg);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-4"></div>
+            <div class="col col-12 col-sm-4">
+            <form>
+                <table class="table">
+                    <tr>
+                        <td class="right">Name :</td>
+                        
+                        <td><input type="text" id="name" placeholder="Your Name...."></td>
+                    </tr>
+                    <tr>
+                        <td class="right">RollNo :</td>
+                       
+                        <td><input type="int" id="rollno" placeholder="Your Roll No..."></td>
+                    </tr>
+                    <tr>
+                        <td class="right">AddmisionNo:</td>
+                        
+                        <td><input type="int" id="admno" placeholder="Admision no..."></td>
+                    </tr>
+                    <tr>
+                        <td class="right">College :</td>
+                        
+                        <td><input type="text" id="college" placeholder="Your College Name..."></td>
+                    </tr>
+                    <tr>
+                        <td class="right"><button type="button" class="btn-danger" onclick="read();">Register</button></td>
+                        <td><button>Cancel</button></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+            <div class="col col-12 col-sm-4"></div>
+
+        </div>
+    </div>
+</body>
+</html>
