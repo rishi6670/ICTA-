@@ -36,6 +36,31 @@
 #a.pop()  #to delete last element from list
 #print a
 
-a=[0,1,2,3]
-a.pop(0) # to delete an element from list pop(index)
-print a
+#a=[0,1,2,3]
+#a.pop(0) # to delete an element from list pop(index)
+#print a
+
+#a=[0,1,2,3]
+#print a[::-1] # to reverse a list
+#a.reverse()
+#print a
+
+# to find largest and smallest no in list
+#maz=0
+#a=[1,2,3,4,5,5,6,6,7]
+#for i in a:
+#    if i>maz:
+#        maz=i
+#    if i<min:
+#        min=i
+#print "large :",maz,"small :",min
+
+# list index
+lst=[]
+num=int(input("How many numbers :"))
+for n in range(num):
+    numbers=int(input("Enter the number :"))
+    lst.append(numbers)
+print lst    
+print max(lst)
+print min(lst)
