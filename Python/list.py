@@ -56,11 +56,44 @@
 #print "large :",maz,"small :",min
 
 # list index
-lst=[]
-num=int(input("How many numbers :"))
-for n in range(num):
-    numbers=int(input("Enter the number :"))
-    lst.append(numbers)
-print lst    
-print max(lst)
-print min(lst)
+#lst=[]
+#num=int(input("How many numbers :"))
+#for n in range(num):
+#    numbers=int(input("Enter the number :"))
+#    lst.append(numbers)
+#print lst    
+#print max(lst)
+#print min(lst)
+
+#dictionary
+
+#b={"welcome":"come",3.5:"three point five",4:"four"}
+#print b
+#b[welcome]="comewel"
+#print b[welcome]
+#print b.keys()
+#print b.values()
+#print b.items()
+#for i in b:
+ #   print i,b[i]
+
+#print b.has_key("welcome")
+#print b.get("welcome")
+#del b[4]
+#print b
+ 
+ #home work Q1
+#b=["circle","square","triangle"]
+#b[0]="elipse"
+#print b
+#b.insert(0,"rectangle") #add an element to first position
+#print b
+#b.pop(3)
+#print b
+
+#homework Q2
+farm={"sheep":5,"cow":2,"goats":10}
+#print farm
+farm.update({"duck":8}) #to update a new key and value to dictionary
+#print farm
+print len(farm)  #to display no of items in dictionary
