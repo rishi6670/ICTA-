@@ -1,5 +1,13 @@
-label{
-  align-content: center;
-  font-size: 10px solid;
+.navc_img{
+  width: 30px;
+  height: 30px;
 }
-
+.navbar-brand{
+  font-weight: 1000;
+}
+.navbar-brand{
+  font-family: 'Times New Roman', Times, serif;
+}
+.nav-item1{
+  float: right;
+}
