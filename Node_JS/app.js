@@ -10,7 +10,7 @@ app.use(express.static('views/images'));
 app.use(express.urlencoded());
 
 app.get('/',(req,res)=>{
-    res.render('index');
+    res.render('index',{name:"Rishi"});
 });
 app.get('/about',(req,res)=>{
     res.render('about');
@@ -31,8 +31,36 @@ app.post('/getdata',(req,res)=>{
     console.log(address);
     var place=req.body.getplace;
     console.log(place);
+
+});
+
+app.post('/login',(req,res)=>{
+    var user=req.body.username;
+    var pass=req.body.password;
+
+    if(user=="admin"&&pass=="1234")
+    {
+        res.send("sucess");
+        res.send(JSON.stringify({status:"sucess"}));
+    }
+    else
+    {
+        res.send("failed");                             // to pass normal data
+        res.send(JSON.stringify({status:"failed"}));   //to pass json data
+    }
+});
+
+app.post('/register',(req,res)=>{
+    var name=req.body.name;
+    var admno=req.body.admno;
+    var  mobno=req.body.mobno;
+
+    res.send(name+admno+mobno);
+    
 });
 
 
 
-app.listen(5000);
+app.listen(3000 ,()=>{
+    console.log("App is running sucessfully");
+});
