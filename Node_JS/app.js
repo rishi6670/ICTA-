@@ -1,11 +1,38 @@
 const express=require('express');
+const xphbs=require('express-handlebars');
 
 var app=express();
+
+app.engine('handlebars',xphbs({defaultLayout:'mainpage'}));
+app.set('view engine','handlebars');
+
+app.use(express.static('views/images'));
+app.use(express.urlencoded());
+
 app.get('/',(req,res)=>{
-    res.send("<marquee><h1>hello</h1></marquee><br><marquee><h1>Welcome to Ooty</h1></marquee>");
+    res.render('index');
 });
-app.get('/home',(req,res)=>{
-    res.send(' [{"name":"tom","age":23},{"name":"riya","age":23}]');
+app.get('/about',(req,res)=>{
+    res.render('about');
+});
+app.get('/contact',(req,res)=>{
+    res.render('contact');
+});
+app.get('/gallery',(req,res)=>{
+    res.render('gallery');
 });
 
-app.listen(3000);
+app.post('/getdata',(req,res)=>{
+    var name=req.body.getname;
+    //res.send(name);
+    console.log(name);
+    var address=req.body.getaddress;
+    //res.send(address);
+    console.log(address);
+    var place=req.body.getplace;
+    console.log(place);
+});
+
+
+
+app.listen(5000);
