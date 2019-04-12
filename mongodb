@@ -1,0 +1,54 @@
+> create db
+	use database (name)
+	use cpmpanies
+
+>create collection
+	db.createCollection('name')
+	> db.createCollection('customers");
+
+>insert values to colledtion
+	 db.customers.insert({first_name:"jhon",last_name:"deo"});
+
+>view the values of db
+	db.customers.find();
+
+>to view the data in arrageed view
+	db.customers.find().pretty()
+
+>multiple insert
+	db.customers.insert([{first_name:"munna",last_name:"thampi"},{first_name:"nandu",last_name:"anil",gender:"male"}]);
+
+>to update a data in a collection (overide entire data)
+	db.customers.update({ condition},{data with nwew field});
+	db.customers.update({first_name:"john"},{first_name:"john",last_name:"tom",gender:"male"});
+
+>update particular data or add one data without override
+	db.customers.update({ condition},{$set:{data with nwew field}});	
+	db.customers.update({first_name:"john"},{$set:{age:25}});
+
+>find particular data
+	db.customers.find({first_name:"john"});
+	db.customers.find({first_name:"jhon"}).pretty()
+
+>to select using OR 
+	db.customers.find({$or[{first_name:"john"},{first_name:"munna"}]});
+
+>to sort ascending order
+	db.customers.find().sort({last_name:1});
+
+>to sort dscending order
+	db.customers.find().sort({last_name:-1});
+
+>to count
+	db.customers.find().count();
+		or
+	db.customers.count();
+
+>limit and skip
+ 	db.customers.find().limit(2).skip(1)
+
+
+	
+
+
+
